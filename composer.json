@@ -1,0 +1,24 @@
+{
+    "name": "rbao123/think-jwt",
+    "description": "web api token",
+    "keywords": [
+        "thinkphp"
+    ],
+    "require": {
+        "php" : ">=7.1",
+        "topthink/framework": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "rbao123",
+            "email": "wrbao@foxmail.com"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+
+        }
+    },
+    "minimum-stability": "dev"
+}

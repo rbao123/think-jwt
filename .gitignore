@@ -1,0 +1,6 @@
+.idea
+/vendor/
+/app/
+index.php
+.env
+/nginx.htaccess
