@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\common\jwt\blacklist;
+namespace bao\jwt\blacklist;
 
 
 use think\facade\Cache;

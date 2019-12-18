@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\common\jwt\parser;
+namespace bao\jwt\parser;
 
 
 use app\common\jwt\blacklist\Blacklist;

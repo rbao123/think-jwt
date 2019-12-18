@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\common\jwt;
+namespace bao\jwt;
 
 
 class Encryption

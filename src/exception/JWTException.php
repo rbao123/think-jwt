@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\common\jwt\exception;
+namespace bao\jwt\exception;
 
 
 class JWTException extends \Exception
