@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\common\jwt\payload;
+namespace bao\jwt\payload;
 
 
 use app\common\jwt\Encryption;

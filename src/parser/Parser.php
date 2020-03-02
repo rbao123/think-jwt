@@ -4,10 +4,10 @@
 namespace bao\jwt\parser;
 
 
-use app\common\jwt\blacklist\Blacklist;
-use app\common\jwt\Encryption;
-use app\common\jwt\exception\JWTException;
-use app\common\jwt\parser\Examine;
+use bao\jwt\blacklist\Blacklist;
+use bao\jwt\Encryption;
+use bao\jwt\parser\Examine;
+use bao\jwt\exception\JWTException;
 use think\Request;
 
 class Parser

@@ -6,7 +6,9 @@
     ],
     "require": {
         "php" : ">=7.1",
-        "topthink/framework": "^6.0"
+        "topthink/framework": "^6.0",
+        "ext-openssl": "*",
+        "ext-json": "*"
     },
     "authors": [
         {

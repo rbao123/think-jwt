@@ -4,7 +4,7 @@
 namespace bao\jwt;
 
 
-use app\common\jwt\parser\Parser;
+use bao\jwt\parser\Parser;
 
 class JWTAuth extends JWT
 {

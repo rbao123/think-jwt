@@ -4,8 +4,8 @@
 namespace bao\jwt\parser;
 
 
-use app\common\jwt\blacklist\Blacklist;
-use app\common\jwt\exception\JWTException;
+use bao\jwt\blacklist\Blacklist;
+use bao\jwt\exception\JWTException;
 
 class Examine
 {

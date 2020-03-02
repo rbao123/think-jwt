@@ -4,8 +4,8 @@
 namespace bao\jwt;
 
 
-use app\common\jwt\parser\Parser;
-use app\common\jwt\payload\Payload;
+use bao\jwt\parser\Parser;
+use bao\jwt\payload\Payload;
 
 class JWT
 {

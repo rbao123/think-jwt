@@ -4,6 +4,9 @@
 namespace bao\jwt;
 
 
+
+use bao\jwt\exception\JWTException;
+
 class Encryption
 {
     protected $data;
@@ -40,11 +43,15 @@ class Encryption
 
     /**
      * @param $sStr
+     * @throws JWTException
      * @return false|string
      */
     public function decrypt($sStr)
     {
         $decrypted = openssl_decrypt(base64_decode($sStr), 'AES-128-ECB', $this->key, OPENSSL_RAW_DATA);
+        if ($decrypted === false) {
+            throw new JWTException('非法令牌');
+        }
         return json_decode($decrypted,true);
     }
 
