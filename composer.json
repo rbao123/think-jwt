@@ -12,14 +12,14 @@
     },
     "authors": [
         {
-            "name": "rbao123",
+            "name": "rbao",
             "email": "wrbao@foxmail.com"
         }
     ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "bao\\jwt\\": "src"
+            "bao\\jwt": "src/"
         }
     },
     "minimum-stability": "dev"

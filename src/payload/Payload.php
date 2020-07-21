@@ -4,8 +4,8 @@
 namespace bao\jwt\payload;
 
 
-use app\common\jwt\Encryption;
-use app\common\jwt\parser\Parser;
+use bao\jwt\Encryption;
+use bao\jwt\parser\Parser;
 
 class Payload
 {
