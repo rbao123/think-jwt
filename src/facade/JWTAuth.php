@@ -10,7 +10,7 @@ use think\Facade;
 /**
  * Class JWTAuth
  *
- * @package thans\jwt\facade
+ * @package bao\jwt\facade
  * @mixin \bao\jwt\JWTAuth
  * @method string builder(array $user = []) static Token构建
  * @method array auth() static Token验证
@@ -23,6 +23,6 @@ class JWTAuth extends Facade
 {
     protected static function getFacadeClass()
     {
-        return 'app\common\jwt\JWTAuth';
+        return '\bao\jwt\JWTAuth';
     }
 }
