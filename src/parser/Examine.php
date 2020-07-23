@@ -60,7 +60,8 @@ class Examine
     public function checkApp()
     {
         if ($this->combination->multiApp()) {
-            if ($this->verification = !$this->combination->getAppName()) {
+            $app_name = $this->verification['app'];
+            if ($app_name != $this->combination->getAppName()) {
                 throw new JWTException('该令牌不是本应用的');
             }
         }
