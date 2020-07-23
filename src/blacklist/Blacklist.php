@@ -35,23 +35,31 @@ class Blacklist
         return $this->storage->get($key);
     }
 
+    /**
+     * 从黑名单中恢复
+     * @param $key
+     * @return bool
+     */
     public function remove($key)
     {
         return $this->storage->delete($key);
     }
 
-    public function add($verification)
-    {
-        $this->storage->set($this->getKey($verification));
-
-        return $this;
-    }
-
+    /**
+     * 验证是否在黑名单
+     * @param $verification
+     * @return bool
+     */
     public function has($verification)
     {
         return $this->get($this->getKey($verification)) ? true : false;
     }
 
+    /**
+     * 添加黑名单
+     * @param $verification
+     * @return $this
+     */
     public function invalidate($verification)
     {
         return $this->set($this->getKey($verification), $this->getTime($verification));
