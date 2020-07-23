@@ -32,7 +32,7 @@ class Combination
      */
     public function multiApp(): bool
     {
-        $this->is_app = config('jwt-app.multi_app') ?? false;
+       return config('jwt-app.multi_app') ?? false;
     }
 
 
