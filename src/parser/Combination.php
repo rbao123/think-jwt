@@ -15,8 +15,8 @@ class Combination
     public function initializeCheckData()
     {
         $this->check_data = [
-            'start_time' => time(),
-            'end_time' => $this->getEndTime(),
+            'start' => time(),
+            'end' => $this->getEndTime(),
             'jti' => $this->getJti(),
         ];
         if ($this->multiApp()) {
