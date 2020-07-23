@@ -11,13 +11,20 @@ class Examine
 {
     public $blacklist;
     public $verification;
+    public $combination;
 
-    public function __construct(Blacklist $blacklist)
+    public function __construct(Blacklist $blacklist, Combination $combination)
     {
         $this->blacklist = $blacklist;
+        $this->combination = $combination;
     }
 
     public function setVerification($verification)
+    {
+        return $this->verification = $verification;
+    }
+
+    public function getVerification($verification)
     {
         return $this->verification = $verification;
     }
@@ -52,6 +59,11 @@ class Examine
      */
     public function checkApp()
     {
+        if ($this->combination->multiApp()) {
+            if ($this->verification = !$this->combination->getAppName()) {
+                throw new JWTException('该令牌不是本应用的');
+            }
+        }
         $this->checkTime();
     }
 
