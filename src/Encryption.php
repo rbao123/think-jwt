@@ -7,6 +7,11 @@ namespace bao\jwt;
 
 use bao\jwt\exception\JWTException;
 
+/**
+ * 加解密token
+ * Class Encryption
+ * @package bao\jwt
+ */
 class Encryption
 {
     protected $data;
@@ -35,7 +40,7 @@ class Encryption
      * @param string $data
      * @return string
      */
-    public function encryptionToken(string $data)
+    public function encryptionToken(string $data): string
     {
         $to_data = openssl_encrypt($data, 'AES-128-ECB', $this->key, OPENSSL_RAW_DATA);
         return $this->token = base64_encode($to_data);

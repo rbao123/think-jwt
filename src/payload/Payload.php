@@ -8,6 +8,11 @@ use bao\jwt\Encryption;
 use bao\jwt\parser\Combination;
 use bao\jwt\parser\Parser;
 
+/**
+ * 创建token
+ * Class Payload
+ * @package bao\jwt\payload
+ */
 class Payload
 {
     protected $combination;
@@ -27,7 +32,7 @@ class Payload
      * @param $payload
      * @return string
      */
-    public function encode($payload)
+    public function encode($payload): string
     {
         return $this->encryption->encryptionToken(json_encode($this->combination->initializeCheckData())) . '.' .
             $this->encryption->encryptionToken(json_encode($payload));
@@ -36,9 +41,9 @@ class Payload
     /**
      * 刷新token
      * @return string
-     * @throws \bao\jwt\exception\JWTException
+     * @throws
      */
-    public function refresh()
+    public function refresh(): string
     {
         $this->parser->getToken();
         return $this->encode($this->parser->parseToken());

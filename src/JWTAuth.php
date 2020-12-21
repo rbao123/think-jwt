@@ -10,10 +10,9 @@ class JWTAuth extends JWT
 {
     /**
      * Token验证，返回payload
-     *
      * @return array
      */
-    public function auth()
+    public function auth(): array
     {
         return (array)$this->getPayload();
     }
@@ -38,8 +37,10 @@ class JWTAuth extends JWT
 
     /**
      * 刷新token
+     * @return mixed
+     * @throws
      */
-    public function refresh()
+    public function refresh(): string
     {
         return $this->payload->refresh();
     }

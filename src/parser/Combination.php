@@ -3,7 +3,11 @@
 
 namespace bao\jwt\parser;
 
-
+/**
+ * 创建基础jwt数据格式
+ * Class Combination
+ * @package bao\jwt\parser
+ */
 class Combination
 {
     public $check_data;
@@ -12,7 +16,7 @@ class Combination
     /**
      * 构建验证信息
      */
-    public function initializeCheckData()
+    public function initializeCheckData(): array
     {
         $this->check_data = [
             'start' => time(),
@@ -40,7 +44,7 @@ class Combination
      * 获取标记
      * @return string
      */
-    public function getJti()
+    public function getJti(): string
     {
         return uniqid('JWT', true);
     }

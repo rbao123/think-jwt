@@ -9,7 +9,6 @@ use think\Facade;
 
 /**
  * Class JWTAuth
- *
  * @package bao\jwt\facade
  * @mixin \bao\jwt\JWTAuth
  * @method string builder(array $user = []) static Token构建

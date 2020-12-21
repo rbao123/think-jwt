@@ -6,10 +6,14 @@ namespace bao\jwt\parser;
 
 use bao\jwt\blacklist\Blacklist;
 use bao\jwt\Encryption;
-use bao\jwt\parser\Examine;
 use bao\jwt\exception\JWTException;
 use think\Request;
 
+/**
+ * 解析token
+ * Class Parser
+ * @package bao\jwt\parser
+ */
 class Parser
 {
     public $encryption;
@@ -61,7 +65,7 @@ class Parser
     /**
      * 分割原始token
      */
-    public function separation()
+    public function separation(): Parser
     {
         $token_array = explode('.', $this->token);
         $this->verification = $this->decrypt($token_array[0]);
@@ -73,7 +77,7 @@ class Parser
      * 校验token
      * @return $this
      */
-    public function checkToken()
+    public function checkToken(): Parser
     {
         $this->examine->check($this->verification);
         return $this;
@@ -84,7 +88,7 @@ class Parser
      * @param string $token
      * @return string
      */
-    public function decrypt(string $token)
+    public function decrypt(string $token): string
     {
         return $this->encryption->decrypt($token);
     }
@@ -94,7 +98,7 @@ class Parser
      * @return $this
      * @throws JWTException
      */
-    public function getToken()
+    public function getToken(): Parser
     {
         $bearer = $this->request->header('Authorization');
         if (!$bearer) {

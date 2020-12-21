@@ -7,6 +7,11 @@ namespace bao\jwt\parser;
 use bao\jwt\blacklist\Blacklist;
 use bao\jwt\exception\JWTException;
 
+/**
+ * 验证token格式
+ * Class Examine
+ * @package bao\jwt\parser
+ */
 class Examine
 {
     public $blacklist;
@@ -71,6 +76,7 @@ class Examine
     /**
      * 验证
      * @param $verification
+     * @throws
      */
     public function check($verification)
     {

@@ -23,7 +23,7 @@ class JWT
      * @param array $customerClaim
      * @return string
      */
-    public function createToken($customerClaim = [])
+    public function createToken($customerClaim = []): string
     {
         return $this->payload->encode($customerClaim);
     }

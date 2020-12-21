@@ -3,7 +3,11 @@
 
 namespace bao\jwt\blacklist;
 
-
+/**
+ * 黑名单
+ * Class Blacklist
+ * @package bao\jwt\blacklist
+ */
 class Blacklist
 {
     protected $storage;
@@ -23,7 +27,7 @@ class Blacklist
         return $verification['end'];
     }
 
-    public function set($key, $time = 0)
+    public function set($key, $time = 0): Blacklist
     {
         $this->storage->set($key, $time);
 
@@ -40,7 +44,7 @@ class Blacklist
      * @param $key
      * @return bool
      */
-    public function remove($key)
+    public function remove($key): bool
     {
         return $this->storage->delete($key);
     }
@@ -50,7 +54,7 @@ class Blacklist
      * @param $verification
      * @return bool
      */
-    public function has($verification)
+    public function has($verification): bool
     {
         return $this->get($this->getKey($verification)) ? true : false;
     }
@@ -60,7 +64,7 @@ class Blacklist
      * @param $verification
      * @return $this
      */
-    public function invalidate($verification)
+    public function invalidate($verification): Blacklist
     {
         return $this->set($this->getKey($verification), $this->getTime($verification));
     }
