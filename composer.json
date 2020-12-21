@@ -5,7 +5,7 @@
         "thinkphp"
     ],
     "require": {
-        "php" : ">=7.1",
+        "php" : ">=7.3",
         "topthink/framework": "^6.0",
         "ext-openssl": "*",
         "ext-json": "*"
@@ -21,6 +21,5 @@
         "psr-4": {
             "bao\\jwt\\": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
