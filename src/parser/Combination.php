@@ -11,7 +11,6 @@ namespace bao\jwt\parser;
 class Combination
 {
     public $check_data;
-    public $is_app;
 
     /**
      * 构建验证信息

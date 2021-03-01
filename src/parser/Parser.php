@@ -87,6 +87,7 @@ class Parser
      * 解密密文
      * @param string $token
      * @return string
+     * @throws JWTException
      */
     public function decrypt(string $token): string
     {

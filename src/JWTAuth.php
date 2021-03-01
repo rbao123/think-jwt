@@ -4,7 +4,6 @@
 namespace bao\jwt;
 
 
-use bao\jwt\parser\Parser;
 
 class JWTAuth extends JWT
 {
@@ -29,6 +28,7 @@ class JWTAuth extends JWT
 
     /**
      * 添加Token至黑名单
+     * @throws exception\JWTException
      */
     public function invalidate()
     {
