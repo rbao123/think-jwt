@@ -86,10 +86,10 @@ class Parser
     /**
      * 解密密文
      * @param string $token
-     * @return string
+     * @return array
      * @throws JWTException
      */
-    public function decrypt(string $token)
+    public function decrypt(string $token): array
     {
         return $this->encryption->decrypt($token);
     }

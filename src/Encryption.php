@@ -49,9 +49,9 @@ class Encryption
     /**
      * @param $sStr
      * @throws JWTException
-     * @return false|string
+     * @return array
      */
-    public function decrypt($sStr)
+    public function decrypt($sStr): array
     {
         $decrypted = openssl_decrypt(base64_decode($sStr), 'AES-128-ECB', $this->key, OPENSSL_RAW_DATA);
         if ($decrypted === false) {
