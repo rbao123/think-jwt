@@ -89,7 +89,7 @@ class Parser
      * @return string
      * @throws JWTException
      */
-    public function decrypt(string $token): string
+    public function decrypt(string $token)
     {
         return $this->encryption->decrypt($token);
     }
